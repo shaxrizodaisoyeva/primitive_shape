@@ -12,7 +12,8 @@ class Point:
         Returns:
             float or int: distance.
         """
-        pass
+        from math import sqrt
+        return sqrt((0-self.y)**2)
 
     def distance_from_Ycoordinate(self):
         """
@@ -23,7 +24,8 @@ class Point:
         Returns:
             float or int: distance.
         """
-        pass
+        from math import sqrt
+        return sqrt((0-self.x)**2)
 
     def getQuadrant(self):
         """
@@ -34,7 +36,15 @@ class Point:
         Returns:
             int: quadrant.
         """
-        pass
+        if self.x>0 and self.y>0:
+            ans=1
+        if self.x<0 and self.y>0:
+            ans=2
+        if self.x<0 and self.y<0:
+            ans=3
+        if self.x>0 and self.y<0:
+            ans=4
+        return ans
 
     def on_Xcoordinate(self):
         """
@@ -45,7 +55,11 @@ class Point:
         Returns:
             bool: result.
         """
-        pass
+        if self.y==0:
+            ans=True
+        else:
+            ans=False
+        return ans
 
     def on_Ycoordinate(self):
         """
@@ -56,5 +70,9 @@ class Point:
         Returns:
             bool: result.
         """
-        pass
+        if self.x==0:
+            ans=True
+        else:
+            ans=False
+        return ans
  

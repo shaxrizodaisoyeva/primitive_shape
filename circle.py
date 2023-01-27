@@ -11,7 +11,8 @@ class Circle:
         Returns:
             float or int: result.
         """
-        pass
+        from math import pi
+        return pi*self.r*self.r
 
     def getLength(self):
         """
@@ -22,4 +23,7 @@ class Circle:
         Returns:
             float or int: result..
         """
-        pass
+        from math import pi
+        return 2*pi*self.r
+a=Circle(3)
+print(a.getArea())

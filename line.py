@@ -14,4 +14,7 @@ class Line:
         Returns:
             float or int: distance.
         """
-        pass
+        from math import sqrt
+        return sqrt((self.x2-self.x1)**2+(self.y2-self.y1)**2)
+a=Line(2,3,4,9)
+print(a.get_length())
